@@ -35,7 +35,9 @@ def convert_df(data):
 
 # 页面绘制
 st.title('Excel转JSON工具')
-st.info('上传Excel，每一列会被处理为JSON格式')
+st.info('上传Excel，每一列会被处理为以列名为键，列内容列表为值的JSON格式文件')
+st.write(' ')
+st.text('注意！需要保证每个分表中，列名只有一行，多行列名会将非第一行内容认为是列值的一部分展示到列表中')
 st.write(' ')
 
 st.header('Step 1. 上传Excel表格')
@@ -51,3 +53,6 @@ if file is not None:
                     data=js_data[i],
                     file_name=dl_name,
                     mime='json')
+
+    st.text('完成~')
+    st.balloon
