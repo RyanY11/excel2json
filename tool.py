@@ -28,7 +28,7 @@ def convert_df(data):
         for column in ex_data[sheet].columns:
             con_data_list = ex_data[sheet][column].tolist()
             if is_string_list(con_data_list):
-                st.write(con_data_list)
+                # st.write(con_data_list)
                 ex_col_data[column] = ast.literal_eval(con_data_list)
             else:
                 ex_col_data[column] = con_data_list
@@ -41,7 +41,7 @@ def convert_df(data):
 
 # 检查是否为list并转换
 def is_string_list(var):
-    print(var)
+    st.write(var)
     try:
         return isinstance(ast.literal_eval(var), list)
     except (ValueError, SyntaxError):
