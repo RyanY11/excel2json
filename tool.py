@@ -41,6 +41,7 @@ def convert_df(data):
 
 # 检查是否为list并转换
 def is_string_list(var):
+    print(var)
     try:
         return isinstance(ast.literal_eval(var), list)
     except (ValueError, SyntaxError):
