@@ -47,7 +47,7 @@ if file is not None:
     st.header('Step 2. 下载JSON文件')
     for i in range(len(js_name)):
         dl_name = str(js_name[i]) + '.json'
-        st.download_button(label=i,
+        st.download_button(label=js_name[i],
                     data=js_data[i],
                     file_name=dl_name,
                     mime='json')
