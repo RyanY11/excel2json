@@ -55,4 +55,4 @@ if file is not None:
                     mime='json')
 
     st.text('完成~')
-    st.balloon
+    st.balloons()
