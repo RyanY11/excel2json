@@ -54,5 +54,6 @@ if file is not None:
                     file_name=dl_name,
                     mime='json')
 
-    st.text('完成~')
+    st.write('')
+    st.info('完成~')
     st.balloons()
