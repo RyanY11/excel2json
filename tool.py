@@ -21,8 +21,8 @@ def convert_df(data):
     for sheet in sheets:
         js_data_name.append(str(sheet))
         ex_data[sheet] = ex_file.parse(sheet)
-        df = pd.read_excel(ex_data[sheet])
-        json_data = df.to_json(orient='records',force_ascii=False)
+        # df = pd.read_excel(ex_data[sheet])
+        json_data = ex_data[sheet].to_json(orient='records',force_ascii=False)
         js_data_list.append(json_data)
 
     return js_data_name,js_data_list
