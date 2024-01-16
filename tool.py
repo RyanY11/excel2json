@@ -42,7 +42,7 @@ def convert_df(data):
                 processed_list.append(element)
             ex_col_data[column] = processed_list
                 
-        json_data = json.dumps(ex_col_data, indent=4)
+        json_data = json.dumps(ex_col_data, indent=4, ensure_ascii=False)
         js_data_list.append(json_data)
 
     return js_data_name,js_data_list
